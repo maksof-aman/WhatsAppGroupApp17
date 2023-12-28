@@ -1,0 +1,9 @@
+<div class="flex justify-center items-center mt-28">
+  <form class="w-full max-w-sm">
+    <img class="mx-auto h-28 w-auto mb-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrSLe4q65mYpDPpUasDZHYxhC-GCZXi1PJHA&usqp=CAU" alt="Your Company">
+    <h1 class="text-3xl font-bold mb-14 text-teal-700">Create Your Group Name:</h1>
+    <div class="flex items-center border-b border-teal-500 py-2">
+    <input [(ngModel)]="userInput" class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Create Group Name" aria-label="Full name" name="userInput" (keyup)="sendMessage()">
+  </div>
+</form>
+</div>

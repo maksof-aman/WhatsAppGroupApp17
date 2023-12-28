@@ -1,0 +1,39 @@
+<div *ngIf="count === 1">
+<app-step1 (messageEvent)="receiveMessage($event)"></app-step1>
+<div class="flex justify-center items-center mt-6">
+<button (click)="increase()" class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
+    Create Group
+  </button>
+</div>
+</div>
+
+<!-- NEXT BUTTON -->
+<div *ngIf="count === 2" >
+  <app-step2 [groupName]="groupName"  (dataEvent)="usersDitails($event)"  ></app-step2>
+<div class="flex justify-center items-center mt-4 ml-20">
+<button (click)="increase()"  class="flex-shrink-0 w-20 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
+    Next
+  </button>
+</div>
+</div>
+
+
+
+
+<div *ngIf="count === 3">
+
+<app-step3 [groupName]="groupName" [usersData]="selectedUsers" ></app-step3>
+<div class="flex justify-center items-center mt-6 ml-20">
+<button  class="flex-shrink-0 w-20 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button"> Done </button>
+</div>
+</div>
+
+
+<!-- PREVIOUS BUTTON -->
+<div *ngIf="count > 1" class="">
+  <div class="flex justify-center items-center mt-3 ml-20">
+  <button (click)="decrease()"  class="flex-shrink-0 w-20 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
+      Previous
+    </button>
+    </div>
+</div>
